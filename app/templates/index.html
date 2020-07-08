@@ -5,13 +5,14 @@
 
 <!-- content -->
 {% block content %}
-<h3>Native homepage template using base template</h3>
+<h3> Top news </h3>
 
 <!-- loop through items -->
-{% for item in news_sources %}
-<ul>
-    <li>{{item.id}}</li>
-</ul>
+{% for item in news_sources%}
+<div class="row">
+    <h4><a href="/articles/{{item.id}}">{{item.name}}</a></h4>
+</div>
 {% endfor %}
+
 <!--  -->
 {% endblock %}
