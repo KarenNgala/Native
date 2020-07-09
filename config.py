@@ -4,7 +4,7 @@ class Config:
     '''
     '''
     SOURCE_URL='https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
-    NEWS_API_KEY = os.environ.get('API_KEY')
+    API_KEY = os.environ.get('API_KEY')
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
 class ProductionConfig(Config):

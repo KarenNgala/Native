@@ -9,7 +9,7 @@ newsapi = None
 
 def configure_request(app):
     global key, url, newsapi
-    key = app.config['NEWS_API_KEY']
+    key = app.config['API_KEY']
     url = app.config['SOURCE_URL']
     newsapi = NewsApiClient(api_key=key)
 
