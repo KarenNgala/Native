@@ -26,7 +26,7 @@ def headlines():
     '''
     function that gets all english nes sources in a list
     '''
-    res = newsapi.get_top_headlines(language='en', page_size=1, q='corona')
+    res = newsapi.get_top_headlines(language='en', page_size=2, q='corona')
     res_list =  res['articles']
     trending = []
     for item in res_list:
