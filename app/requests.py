@@ -13,7 +13,7 @@ def sources():
     '''
     function that gets all english nes sources in a list
     '''
-    data = newsapi.get_sources(language='en',country='us', category='general')
+    data = newsapi.get_sources(language='en',country='ca')
     data_list = data['sources']
     source_list=[]
     for item in data_list:
@@ -26,14 +26,15 @@ def headlines():
     '''
     function that gets all english nes sources in a list
     '''
-    res = newsapi.get_top_headlines(language='en', page_size=2, q='corona')
+    res = newsapi.get_top_headlines(language='en', page_size=6, sources='cnn')
     res_list =  res['articles']
     trending = []
     for item in res_list:
-        top_article = Headlines(item['description'], item['urlToImage'], item['url'])
+        top_article = Headlines(item['title'], item['urlToImage'], item['url'])
         trending.append(top_article)
 
     return trending
+
 
 def articles(source_id):
     '''

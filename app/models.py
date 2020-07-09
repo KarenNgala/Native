@@ -11,10 +11,10 @@ class Sources:
 class Headlines:
     '''
     '''
-    def __init__(self, description, url_to_image, url):
+    def __init__(self, title, url_to_image, url):
         '''
         '''
-        self.description = description
+        self.title = title
         self.url_to_image = url_to_image
         self.url=url
 
