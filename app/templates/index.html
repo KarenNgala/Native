@@ -22,8 +22,12 @@
         </div>
         <div class="offset-1 col-md-8 offset-1">
             <div class="card">
-                <img src="" alt="">
-                <div class="card-footer"></div>
+                {% for article in trending_article %}
+                <img src="{{article.url_to_image}}" alt="top-article">
+                <div class="card-footer">
+                    <p>{{ article.description }}</p>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

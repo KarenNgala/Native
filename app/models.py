@@ -1,12 +1,21 @@
 class Sources:
     '''
     '''
-    def __init__(self, id, name, description, url):
+    def __init__(self, id, name):
         '''
         '''
         self.id=id
         self.name=name
-        self.description=description
+
+
+class Headlines:
+    '''
+    '''
+    def __init__(self, description, url_to_image, url):
+        '''
+        '''
+        self.description = description
+        self.url_to_image = url_to_image
         self.url=url
 
 

@@ -1,5 +1,5 @@
 from app import app
-from .models import Sources, Articles
+from .models import Sources, Articles, Headlines
 import urllib.request, json
 from newsapi import NewsApiClient
 
@@ -17,10 +17,23 @@ def sources():
     data_list = data['sources']
     source_list=[]
     for item in data_list:
-        new_source = Sources(item['id'], item['name'], item['description'], item['url'])
+        new_source = Sources(item['id'], item['name'])
         source_list.append(new_source)
     
     return source_list
+
+def headlines():
+    '''
+    function that gets all english nes sources in a list
+    '''
+    res = newsapi.get_top_headlines(language='en', page_size=1, q='corona')
+    res_list =  res['articles']
+    trending = []
+    for item in res_list:
+        top_article = Headlines(item['description'], item['urlToImage'], item['url'])
+        trending.append(top_article)
+
+    return trending
 
 def articles(source_id):
     '''
