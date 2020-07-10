@@ -10,10 +10,14 @@
 - Clone this repo and ```cd``` into the folder
 ```sh 
 $ git clone https://github.com/KarenNgala/Native
+
 $ source virtual/bin/activate
+
 (virtual)$ pip install -r requirements.txt
-(virtual)$ python3 run.py
+
+(virtual)$ python3 run.py server
 ```
+- To run unit tests; ``` (virtual)$ python3 run.py test```
 
 #### **BDD**
 1. As a user, I would like to see various news sources on the homepage of the application.
